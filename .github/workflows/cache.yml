@@ -1,6 +1,7 @@
 name: testing cache
 on:
-  push:
+  # push:
+  workflow_dispatch:
 jobs:
   get-data:
     runs-on: ubuntu-latest
