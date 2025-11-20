@@ -1,0 +1,15 @@
+name: testing cache
+on:
+  push:
+jobs:
+  get-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/cache@v4
+        id: cache-data
+        with:
+          key: data
+          path: data.txt
+      - run: echo ${{ steps.cache-data.outputs.cache-hit }}
+      - run: node getData.js
+        if: steps.cache-data.outputs.cache-hit == "true"
