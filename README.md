@@ -1,4 +1,4 @@
-# Ejercicio 01
+# Ejercicio 01a
 
 Crear un workflow que:
 
@@ -6,3 +6,7 @@ Crear un workflow que:
 - Descargue el repo
 - Instale node
 - Instale las dependencias con npm (npm ci)
+
+# Ejercicio 01b
+
+- Guardar keys del caché diferentes para cada versión del package.json
