@@ -9,7 +9,7 @@ jobs:
       - uses: actions/cache@v4
         id: cache-data
         with:
-          key: data
+          key: data-${{ hashFiles('getData.js') }}
           path: data.txt
       - run: echo ${{ steps.cache-data.outputs.cache-hit }}
       - run: node getData.js
