@@ -12,4 +12,4 @@ jobs:
           path: data.txt
       - run: echo ${{ steps.cache-data.outputs.cache-hit }}
       - run: node getData.js
-        if: steps.cache-data.outputs.cache-hit == "true"
+        if: steps.cache-data.outputs.cache-hit == 'true'
