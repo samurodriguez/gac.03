@@ -14,3 +14,4 @@ jobs:
       - run: echo ${{ steps.cache-data.outputs.cache-hit }}
       - run: node getData.js
         if: steps.cache-data.outputs.cache-hit != 'true'
+      - run: cat data.txt
