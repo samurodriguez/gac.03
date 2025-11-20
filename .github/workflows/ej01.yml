@@ -1,5 +1,7 @@
 name: exercise 01
-on: push
+on:
+  push:
+  workflow_dispatch:
 jobs:
   setup-node:
     runs-on: ubuntu-latest
