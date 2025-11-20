@@ -10,3 +10,8 @@ Crear un workflow que:
 # Ejercicio 01b
 
 - Guardar keys del caché diferentes para cada versión del package.json
+
+# Ejercicio 01c
+
+- Crear una matrix para que el job se ejecute en diferentes sistemas operativos (ej: ubuntu, windows)
+- Crear cache keys diferentes para cada OS
