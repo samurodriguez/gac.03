@@ -7,10 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - run: echo "npm-cache-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+        id: get-cache-dir
+      - run: echo ${{ steps.get-cache-dir.outputs.npm-cache-dir }}
       - uses: actions/cache@v4
         with:
           key: npm-cache-${{ hashFiles('package-lock.json') }}
-          path: ~/.npm
+          path: ${{ steps.get-cache-dir.outputs.npm-cache-dir }}
+          restore-keys: |
+            npm-cache-
       - uses: actions/setup-node@v6
         with:
           node-version: 22
